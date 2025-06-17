@@ -15,11 +15,11 @@ from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 from sklearn.model_selection import KFold, train_test_split
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler, label_binarize
 
-from GAdaBoost.GAdaBoost import GSAMME
+from GAdaBoost import GSAMME
 
 
 def main(Noise_ratio, data_nm, seed):
-    data_frame = pd.read_csv(r"/Users/xieqin/Documents/dataset/noise/noise" + str(Noise_ratio) + '/'+ data_nm + str(Noise_ratio) + ".csv",
+    data_frame = pd.read_csv(r"/datasets/" + data_nm + str(Noise_ratio) + ".csv",
                              header=None)  
     data = data_frame.values  
     data = np.array(data)
